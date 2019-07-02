@@ -3,15 +3,12 @@ var orm = require('../config/orm.js');
 
 // create the burger object
 var burger = {
-  // Select all burger table entries
   selectAll: function(cb) {
     orm.selectAll('burgers', function(res) {
-      // return the call back as the result
       cb(res);
     });
   },
 
-  // The variables cols and vals are arrays
   insertOne: function(cols, vals, cb) {
     orm.insertOne('burgers', cols, vals, function(res) {
       cb(res);
@@ -24,5 +21,4 @@ var burger = {
   }
 };
 
-// Export the database functions for the controller (burgerController.js).
 module.exports = burger;
