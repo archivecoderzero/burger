@@ -1,8 +1,6 @@
 // DEPENDENCIES 
 var express = require('express');
 var router = express.Router();
-
-// Import the model (burger.js) to use its database functions.
 var burger = require('../models/burger.js');
 
 //using express , get the data from the database, with the model from burger.js ,as defined from the selectAll function . which selects all the data from DB and "renders" it on the page using handle bars .
