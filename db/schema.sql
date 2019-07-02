@@ -1,21 +1,11 @@
-INSERT INTO burgers (burger_name, devoured)
-VALUES ("Ham burger", 0);
-
-
-INSERT INTO burgers (burger_name, devoured)
-VALUES ("Bacon Burger", 1);
-
-
-INSERT INTO burgers (burger_name, devoured)
-VALUES ("Veggie Burger", 0);
-
-INSERT INTO burgers (burger_name, devoured)
-VALUES ("God Burger", 1);
-
-INSERT INTO burgers (burger_name, devoured)
-VALUES ("Triple Deck Burger", 0);
-
-INSERT INTO burgers (burger_name, devoured)
-VALUES ("Lucky Burger", 0);
-
-
+CREATE DATABASE burgers_db;
+USE burgers_db;
+CREATE TABLE burgers
+(
+	id int NOT NULL AUTO_INCREMENT,
+	burger_name varchar(255) NOT NULL,
+	devoured BOOLEAN DEFAULT false,
+  	ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  	dt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  	PRIMARY KEY(id)
+);
