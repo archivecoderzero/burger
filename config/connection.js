@@ -1,7 +1,11 @@
 var mysql = require('mysql');
+require("dotenv").config();
+
+var env = process.env.JAWSDB_URL;
+
 var connection;
 
-if (process.env.JAWSDB_URL) {
+if (env) {
 	// *** HEROKU DB 
 	connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
