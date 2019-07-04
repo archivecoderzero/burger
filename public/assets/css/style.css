@@ -4,12 +4,34 @@ margin-right: auto;
 text-align: center;
 }
 
+.burger-name{
+font-size: 25px;
+font-weight: 700;
 
-.col-6.left {
-    background: red;
+}
+
+body {
+    background-image: url(../../assets/images/bgstill.jpg);
+}
+
+#right-text {
+color : BLACK;
 }
 
 
-.col-6.right {
-    background: blue;
+#left-text {
+    color : BLACK;
+    }
+
+#main-text {
+    text-align: center;
 }
+
+.col-6.right{
+    background-image: url(../../assets/images/bgright.jpg);
+}
+
+.col-6.left{
+    background-image: url(../../assets/images/bgleft.jpg);
+}
+
