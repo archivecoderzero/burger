@@ -30,6 +30,17 @@ var orm = {
 		});
 	},
 
+	delete: function(table, condition, cb) {
+        var queryString = "DELETE FROM " + table + " WHERE " + condition;
+
+        connection.query(queryString, function(err, result) {
+            if (err) {
+                throw err;
+            }
+            cb(result);
+        });
+    },
+
 	// Function that insert a single table entry
 	insertOne: function(table, cols, vals, cb) {
 		// Construct the query string that inserts a single row into the target table
@@ -80,7 +91,8 @@ var orm = {
 			// Return results in callback
 			cb(result);
 		});
-	}
+	},
+
 };
 
 // Export the orm object for use in other modules

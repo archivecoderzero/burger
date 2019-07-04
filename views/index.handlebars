@@ -4,30 +4,38 @@
   <div class="container">
     <div class="row">
       <div class="col-6 left">
+        <h3 id="left-text">Step 2 : Feed the pet : </h3>
         {{#each burgers}}
-          {{#unless this.devoured}}
-            <div>
-              <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
-                <button type="submit" class='burgerAvailable'> {{this.burger_name}}</button>
-              </form>
-            </div>
-          {{/unless}}
+        {{#unless this.devoured}}
+        <div>
+          <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
+            <button type="submit" class='btn btn-primary'> {{this.burger_name}}</button>
+          </form>
+        </div>
+        {{/unless}}
         {{/each}}
       </div>
 
       <div class="col-6 right">
-        {{#each burgers}}
-          {{#if this.devoured}}
-            <div class='devoured'>
-              <div>
-                {{this.burger_name}}
-              </div>
-            </div>
-          {{/if}}
-        {{/each}}
+        <h3 id="right-text">Step 3 : Burp the Pet</h3>
+    			{{#each burgers}}
+    				{{#if this.devoured}}
+						<p class="burger-name">{{this.name}}</p>
+						<form action="/burgers/{{this.id}}?_method=DELETE" method="POST">
+            							<span class="burger-name">{{this.burger_name}}
+          				<button class="btn btn-default btn-danger" type="submit">BURPP!</button></span>
+        				</form>
+        			{{/if}}
+				{{/each}}
       </div>
+
+      <div>
+
+
+
+      		<ul class="list-group">
+				</ul>
+  </div>
     </div>
   </div>
 </main>
-
-

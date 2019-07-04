@@ -40,7 +40,19 @@ router.put('/burgers/:id', function(req, res) {
   }, condition, function(data) {
     res.redirect('/');
   });
+
 });
+
+router.delete('/burgers/:id', function(req, res) {
+  var condition = "id = " + req.params.id;
+  burger.delete(condition,
+     function() {
+    res.redirect("/");
+  });
+});
+
+
+
 
 // Export routes for server.js to use.
 module.exports = router;
