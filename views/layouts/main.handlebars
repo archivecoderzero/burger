@@ -2,17 +2,46 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-	<title></title>
+	<title>Feed The Pet</title>
 </head>
 
 <body>
-	<img src="https://via.placeholder.com/350x150" width="400px" id="cute_burger">
+
+	<nav class="navbar navbar-light bg-light">
+		<span class="navbar-brand mb-0 h1">Pet Society</span>
+
+	</nav>
+
+	<br>
+
+	<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+	<img src="assets/images/petmain.gif" width="400px" id="pet">
+    <h1 class="display-4">Feed The Pet</h1>
+    <p class="lead">Step # 1 : Generate a pet food</p>
+	  <div class="col s12">
+    <form action="/burgers" method="POST">
+      <input type="text" id="name" name="burger_name" placeholder="Pet Food Name">
+      <button type="submit" class="btn btn-warning">Generate Food!</button>
+    </form>
+  </div>
+
+  </div>
+</div>
+
+
+
 
 	{{{ body }}}
 
-	<footer class="burgerFooter">
+	<footer class="footer">
 		<div class="footer-copyright">
 			<div class="container">
 				<span class="grey-text text-lighten-4">ArchiveCoderZero</span>
