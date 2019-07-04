@@ -29,9 +29,23 @@ color : BLACK;
 
 .col-6.right{
     background-image: url(../../assets/images/bgright.jpg);
+    min-height: 100px;
 }
 
 .col-6.left{
     background-image: url(../../assets/images/bgleft.jpg);
+    min-height: 100px;
+
 }
 
+
+#feed {
+    margin: 5px;
+}
+
+.jumbotron {
+    background-image: url(../../assets/images/jum.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
