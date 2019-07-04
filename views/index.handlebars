@@ -1,12 +1,9 @@
 <h1>Feed The Pet</h1>
 <main>
 
-  <h2>Create Your Pet Food</h2>
-
-
   <div class="container">
     <div class="row">
-      <div class="col s6">
+      <div class="col-6 left">
         {{#each burgers}}
           {{#unless this.devoured}}
             <div>
@@ -18,7 +15,7 @@
         {{/each}}
       </div>
 
-      <div class="col s6">
+      <div class="col-6 right">
         {{#each burgers}}
           {{#if this.devoured}}
             <div class='devoured'>
